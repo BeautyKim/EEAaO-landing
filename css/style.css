@@ -70,12 +70,12 @@ footer {
     font-family: sans-serif;
 }
 .copyright {
+    font-family: 'SBAggroB';
     width: 100%;
     height: auto;
     white-space: pre-wrap;
     word-wrap: break-word;
     word-break: break-word;
-    color: #ffffff;
     font-size: 16px;
     text-align: center;
 }
@@ -90,15 +90,46 @@ footer {
 HOME
 ================================================ */
 .home {
-    background-color: #000000;
     text-align: center;
     padding-top: 30vh;
+}
+
+.home-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.home-container:before {
+    background: url('../images/poster.png') no-repeat center #000000;
+    background-size: 60%;
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: -10rem;
+    opacity: 0.2;
+    height: 80vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.home-text {
+    font-size: 2rem;
 }
 
 .home-title {
     font-size: 4rem;
 }
 
+.confetti {
+    position: absolute;
+    top: -20rem;
+    opacity: 0.7;
+    width: 100%;
+    height: 50rem;
+}
 /*
 MOVIE
 ================================================ */
@@ -182,6 +213,7 @@ header {
     width: 100%;
     justify-content: center;
     top: 0;
+    z-index: 1;
 }
 
 .wrapper {
@@ -191,8 +223,8 @@ header {
     align-items: center;
 }
 
-.logo {
-
+#homeTextButton {
+    z-index: 10;
 }
 
 .navigation {

@@ -35,10 +35,10 @@ const carousel = document.querySelector('.carousel');
 const carouselLength = document.querySelectorAll('iframe').length;
 
 const IMAGE_WIDTH = 1280;
-let index = 0;
+let index = 1;
 
 prevButton.addEventListener('click', () => {
-  if (index === 0) {
+  if (index === 1) {
     index = carouselLength;
   } else {
     index--;

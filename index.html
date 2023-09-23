@@ -11,7 +11,9 @@
         <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-
+        
+        <!-- SCRIPT -->
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
         
     </head>
 
@@ -19,18 +21,28 @@
         <div class="container">
             <header>
                 <div class="wrapper">
-                    <a class="logo" href="#s1">home</a>
+                    <a class="logo" href="#s1">HOME</a>
                     <nav class="navigation">
                         <ul>
                             <li><a href="#s2">예고편</a></li>
-                            <li><a href="#s3">대사집</a></li>
+                            <li><a href="#s3">명대사</a></li>
                             <li><a href="#s4">굿즈</a></li>
                         </ul>
                     </nav>
                 </div>
             </header>
     		<section class="home" id="s1">
-                <h1 class="home-title">Everything <br/>Everywhere<br/>All <br/>At <br/>Once</h1>
+                <div class="home-container">
+                    <dotlottie-player 
+                        src="https://lottie.host/bc56818c-0d89-463d-9b53-a55f5cf620be/PI9V36pNk5.json" 
+                        class="confetti"
+                        background="transparent" 
+                        speed="1" 
+                        autoplay>
+                    </dotlottie-player>
+                    <p class="home-text">첫돌을 축하해</p>
+                    <h1 class="home-title">Everything <br/>Everywhere<br/>All At <br/> Once</h1>
+                </div>
     		</section>
 
     		<section class="movie" id="s2">
@@ -38,17 +50,17 @@
                 <div class="carousel-container">
                     <div class="carousel">
                         <div class="carousel-item">
-                            <iframe width="1280" height="720" src="https://www.youtube.com/embed/tWWlqoatqwk?autoplay=1" title="[에브리씽 에브리웨어 올 앳 원스] 1주년 기념 특별 동영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                            <iframe width="1280" height="720" src="https://www.youtube.com/embed/tWWlqoatqwk" title="[에브리씽 에브리웨어 올 앳 원스] 1주년 기념 특별 동영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
                                 현재 사용 중인 브라우저는 iframe 요소를 지원하지 않습니다
                             </iframe>
                         </div>
                         <div class="carousel-item">
-                            <iframe width="1280" height="720" src="https://www.youtube.com/embed/wxN1T1uxQ2g?autoplay=1" title="Everything Everywhere All At Once | Official Trailer HD | A24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" seamless allowfullscreen loop>
+                            <iframe width="1280" height="720" src="https://www.youtube.com/embed/wxN1T1uxQ2g" title="Everything Everywhere All At Once | Official Trailer HD | A24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" seamless allowfullscreen loop>
                                 현재 사용 중인 브라우저는 iframe 요소를 지원하지 않습니다
                             </iframe>
                         </div>
                         <div class="carousel-item">
-                            <iframe width="1280" height="720" src="https://www.youtube.com/embed/wxN1T1uxQ2g?autoplay=1" title="Everything Everywhere All At Once | Official Trailer HD | A24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" seamless allowfullscreen loop>
+                            <iframe width="1280" height="720" src="https://www.youtube.com/embed/wxN1T1uxQ2g" title="Everything Everywhere All At Once | Official Trailer HD | A24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" seamless allowfullscreen loop>
                                 현재 사용 중인 브라우저는 iframe 요소를 지원하지 않습니다
                             </iframe>
                         </div>
