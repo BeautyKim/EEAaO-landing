@@ -20,6 +20,7 @@ body {
     background-color: #000000;
 }
 
+
 /*
 COMMON
 ================================================ */
@@ -41,10 +42,21 @@ li {
     text-align: center;
 }
 .container {
-    overflow: auto;
     scroll-snap-type: y mandatory;
     height: 100vh;
+    width: auto;
+    overflow-y: scroll;
     scroll-behavior: smooth;
+}
+.container::-webkit-scrollbar {
+    width: 3px;
+}
+.container::-webkit-scrollbar-thumb {
+    background: linear-gradient(#000000, #C6C5B9);
+    border-radius: 25px;
+}
+.container::-webkit-scrollbar-track {
+    background-color: #000000;
 }
 
 section {
@@ -56,35 +68,29 @@ section {
     padding-top: 15rem;
 }
 
-footer {
-    width: 100%;
-    height: 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 108px 100px 108px 100px;
-    background-color: #000000;
-    overflow: hidden;
+/* 
+HEADER
+================================================*/
+header {
     scroll-snap-align: start;
-    font-family: sans-serif;
-}
-.copyright {
-    font-family: 'SBAggroB';
+    padding: 2rem 0;
+    position: fixed;
+    display: flex;
     width: 100%;
-    height: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-word;
-    font-size: 16px;
-    text-align: center;
+    justify-content: center;
+    top: 0;
+    z-index: 1;
 }
-.image {
-    width: 105px;
-    height: 80px;
+
+.wrapper {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
 }
-.product {
-    padding-top: 5rem;
+
+#homeTextButton {
+    z-index: 10;
 }
 /*
 HOME
@@ -208,6 +214,7 @@ MOVIE
 DIALOG
 ================================================ */
 .dialog {
+    height: 250vh;
     text-align: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/background.png");
     box-sizing: border-box;
@@ -226,33 +233,43 @@ DIALOG
     line-height: 1.3;
     text-align: center;
 }
+
 /* 
-HEADER
+PRODUCT
 ================================================*/
-header {
-    scroll-snap-align: start;
-    padding: 2rem 0;
-    position: fixed;
-    display: flex;
+.product {
+    height: 77vh;
+    padding-top: 5rem;
+}
+
+/* 
+FOOTER
+=================================================*/
+footer {
     width: 100%;
-    justify-content: center;
-    top: 0;
-    z-index: 1;
-}
-
-.wrapper {
+    height: 10rem;
     display: flex;
-    width: 70%;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding: 108px 100px 108px 100px;
+    background-color: #000000;
+    overflow: hidden;
+    font-family: sans-serif;
 }
-
-#homeTextButton {
-    z-index: 10;
+.copyright {
+    font-family: 'SBAggroB';
+    width: 100%;
+    height: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    font-size: 16px;
+    text-align: center;
 }
-
-.navigation {
-
+.image {
+    width: 105px;
+    height: 80px;
 }
 /*
 MOBILE SIZE
