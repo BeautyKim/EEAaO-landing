@@ -130,6 +130,30 @@ HOME
     width: 100%;
     height: 50rem;
 }
+
+.down {
+    position: relative;
+}
+.down::after {
+    position: absolute;
+    right: -10px;
+    top: 2rem;
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-top: 3px solid #C6C5B9;
+    border-right: 3px solid #C6C5B9;
+    transform: rotate(135deg);
+}
+
+.down:hover {
+    animation: motion 0.5s linear 0s infinite alternate; 
+}
+
+@keyframes motion {
+	0% {margin-top: 0px;}
+	100% {margin-top: 5px;}
+}
 /*
 MOVIE
 ================================================ */
