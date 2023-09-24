@@ -14,4 +14,6 @@
 
 🐣 콘페티 효과를 쓰기 위해 lottiefiles 사용
 
-<img width="600" src="./images/readme/화면.mp4">
+<center>
+  <img width="500" src="./images/readme/화면.gif">
+</center>
