@@ -1,6 +1,6 @@
 # Basic landing page
 
-> HTML, CSS 및 JavaScript를 복습하기 위해 외부 라이브러리를 사용하지 않고 개발
+> HTML, CSS 및 JavaScript를 복습하기 위해 최소한으로 외부 라이브러리 사용해 개발
 
 ### **개발환경**
 
@@ -8,10 +8,10 @@
 
 ### **적용기술**
 
-- Carousel, Scroll snap, 가로 마우스휠 스크롤이벤트, keyframes
+- Carousel, Scroll snap, 가로 마우스휠 스크롤이벤트, keyframes, lottiefiles
 
 # 화면
 
-<img src="./images/readme/스크린샷1.png">
-<img src="./images/readme/스크린샷2.png">
-<img src="./images/readme/스크린샷4.png">
+🐣 콘페티 효과를 쓰기 위해 lottiefiles 사용
+
+<img width="600" src="./images/readme/화면.mp4">

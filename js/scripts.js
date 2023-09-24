@@ -1,5 +1,3 @@
-// froduct
-
 const data = [
   {
     name: "Song Reader",
@@ -64,6 +62,7 @@ const data = [
   },
 ];
 
+// froduct
 function createProductHTML(product) {
   return `
     <div class="item">
@@ -92,6 +91,14 @@ function addProductsToPage() {
 
 window.addEventListener("load", addProductsToPage);
 
+// froduct scroll
+const scrollContainer = document.querySelector(".item-content");
+
+scrollContainer.addEventListener("wheel", (event) => {
+  event.preventDefault();
+  scrollContainer.scrollLeft += event.deltaY;
+});
+
 // movie carousel
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
@@ -116,12 +123,4 @@ nextButton.addEventListener("click", () => {
   }
   carousel.style.transform = `translateX(-${IMAGE_WIDTH * index}px)`;
   index++;
-});
-
-// froduct scroll
-const scrollContainer = document.querySelector(".item-content");
-
-scrollContainer.addEventListener("wheel", (event) => {
-  event.preventDefault();
-  scrollContainer.scrollLeft += event.deltaY;
 });

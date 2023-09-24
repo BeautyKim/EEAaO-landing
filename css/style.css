@@ -24,7 +24,6 @@ COMMON
 ================================================ */
 p {
   line-height: 1.7;
-  font-size: 1.125rem;
 }
 ul {
   margin: 0;
@@ -40,12 +39,11 @@ li {
   text-align: center;
 }
 .container {
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
   height: 100vh;
   width: auto;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 .container::-webkit-scrollbar {
   width: 3px;
@@ -64,7 +62,6 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding-top: 15rem;
 }
 
 /* 
@@ -218,23 +215,43 @@ MOVIE
 DIALOG
 ================================================ */
 .dialog {
-  height: 250vh;
+  height: 300vh;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../images/background.png");
   box-sizing: border-box;
-  display: block;
-  overflow: hidden;
+  padding-top: 20%;
+  scroll-margin-bottom: 30rem;
 }
 
-.dialogText {
-  white-space: pre-wrap;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 48px;
-  letter-spacing: 0em;
-  line-height: 1.3;
-  text-align: center;
+.dialog-content {
+  padding-bottom: 8rem;
+}
+
+.name-text {
+  margin-top: 0.5rem;
+  font-size: 18px;
+}
+
+#content1,
+#content3,
+#content5 {
+  text-align: right;
+  margin-right: 15rem;
+  font-size: 25px;
+}
+
+#content2,
+#content4,
+#content6 {
+  text-align: left;
+  margin-left: 15rem;
+  font-size: 25px;
+}
+
+#hahaha {
+  margin: 10rem;
+  font-size: 30px;
 }
 
 /* 
@@ -307,7 +324,6 @@ footer {
   align-items: center;
   padding: 108px 100px 108px 100px;
   background-color: #000000;
-  overflow: hidden;
   font-family: sans-serif;
   margin-top: 2rem;
 }
