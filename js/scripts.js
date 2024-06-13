@@ -90,6 +90,26 @@ function addProductsToPage() {
 }
 
 window.addEventListener("load", addProductsToPage);
+window.addEventListener("scroll", function () {
+  var scrollTop =
+    window.pageYOffset ||
+    document.documentElement.scrollTop ||
+    document.body.scrollTop;
+  console.log(scrollTop);
+});
+
+// dialog scroll
+const scrollDialog = document.querySelector(".dialog");
+// const scrollDialogContent = document.querySelector(".dialog-content");
+
+scrollDialog.addEventListener("scroll", (event) => {
+  event.preventDefault();
+  console.log(event);
+  console.log(`dialog태그에서 시작:    ${scrollDialog.scrollTop}`);
+  // console.log(
+  //   `dialog-content태그에서 시작:    ${scrollDialogContent.scrollTop}`
+  // );
+});
 
 // froduct scroll
 const scrollContainer = document.querySelector(".item-content");

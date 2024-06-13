@@ -57,7 +57,7 @@ li {
 }
 
 section {
-  height: 100vh;
+  height: 100%;
   scroll-snap-align: start;
   background-size: cover;
   background-repeat: no-repeat;
@@ -219,13 +219,12 @@ MOVIE
 DIALOG
 ================================================ */
 .dialog {
-  height: 300vh;
+  height: 100%;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../images/background.png");
   box-sizing: border-box;
   padding-top: 20%;
-  scroll-margin-bottom: 30rem;
 }
 
 .dialog-content {
@@ -262,14 +261,14 @@ DIALOG
 PRODUCT
 ================================================*/
 .product {
-  height: 77vh;
+  height: 100%;
   padding-top: 5rem;
 }
 
 .product-text {
   text-align: center;
   font-size: 4rem;
-  margin: 4rem auto;
+  margin: 3rem auto;
 }
 
 .item-content {
@@ -321,15 +320,13 @@ FOOTER
 =================================================*/
 footer {
   width: 100%;
-  height: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 108px 100px 108px 100px;
+  padding: 2rem 0 0 1rem;
   background-color: #000000;
   font-family: sans-serif;
-  margin-top: 2rem;
 }
 .copyright {
   font-family: "SBAggroB";
