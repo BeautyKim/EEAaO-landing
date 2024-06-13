@@ -76,6 +76,7 @@ header {
   justify-content: center;
   top: 0;
   z-index: 1;
+  background-color: #000000;
 }
 
 .wrapper {
@@ -114,15 +115,16 @@ HOME
   opacity: 0.2;
   height: 80vh;
   width: 100%;
-  z-index: -1;
 }
 
 .home-text {
   font-size: 2rem;
+  z-index: 1;
 }
 
 .home-title {
   font-size: 4rem;
+  z-index: 1;
 }
 
 .confetti {
@@ -135,6 +137,7 @@ HOME
 
 .down {
   position: relative;
+  z-index: 1;
 }
 .down::after {
   position: absolute;
@@ -164,11 +167,11 @@ HOME
 MOVIE
 ================================================ */
 .movie {
-  height: 100vh;
+  height: 100%;
   scroll-snap-align: start;
   display: flex;
   align-items: center;
-  padding-top: 3rem;
+  padding-top: 5%;
 }
 .carousel-container {
   overflow: hidden;
