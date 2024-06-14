@@ -218,13 +218,32 @@ MOVIE
 /*
 DIALOG
 ================================================ */
+/* 애니메이션 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+
 .dialog {
   height: 100%;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../images/background.png");
   box-sizing: border-box;
-  padding-top: 20%;
+  padding-top: 100vh;
   overflow-y: scroll;
   -ms-overflow-style: none; /* 인터넷 익스플로러 */
   scrollbar-width: none; /* 파이어폭스 */
@@ -236,7 +255,9 @@ DIALOG
 }
 
 .dialog-content {
-  padding-bottom: 8rem;
+  position: relative;
+  height: 300px;
+  opacity: 0;
 }
 
 .name-text {
@@ -261,7 +282,7 @@ DIALOG
 }
 
 #hahaha {
-  margin: 10rem;
+  margin: 10rem 0 60vh;
   font-size: 30px;
 }
 

@@ -90,25 +90,48 @@ function addProductsToPage() {
 }
 
 window.addEventListener("load", addProductsToPage);
-window.addEventListener("scroll", function () {
-  var scrollTop =
-    window.pageYOffset ||
-    document.documentElement.scrollTop ||
-    document.body.scrollTop;
-  console.log(scrollTop);
-});
 
 // dialog scroll
-const scrollDialog = document.querySelector(".dialog");
-// const scrollDialogContent = document.querySelector(".dialog-content");
+const dialogScroll = document.querySelector(".dialog");
+const elements = document.getElementsByClassName("dialog-content");
+const child1 = document.querySelector("#content1");
 
-scrollDialog.addEventListener("scroll", (event) => {
+dialogScroll.addEventListener("scroll", (event) => {
   event.preventDefault();
-  console.log(event);
-  console.log(`dialog태그에서 시작:    ${scrollDialog.scrollTop}`);
-  // console.log(
-  //   `dialog-content태그에서 시작:    ${scrollDialogContent.scrollTop}`
-  // );
+
+  for (let i = 0; i < elements.length; i++) {
+    // 부모 요소와의 거리
+    const distanceBetweenParentAndChild =
+      dialogScroll.scrollTop - elements[i].getBoundingClientRect().top;
+
+    // 애니메이션 동작
+    if (
+      distanceBetweenParentAndChild > 0 &&
+      distanceBetweenParentAndChild - dialogScroll.scrollTop <
+        elements[i].getBoundingClientRect().top
+    ) {
+      elements[i].style.animation = "fadeIn 0.5s forwards";
+    } else if (
+      distanceBetweenParentAndChild - dialogScroll.scrollTop >
+        elements[i].getBoundingClientRect().top ||
+      distanceBetweenParentAndChild < 0
+    ) {
+      elements[i].style.animation = "fadeOut";
+    }
+    console.log("부모창)dialogScroll.scrollTop:     ", dialogScroll.scrollTop);
+    console.log(
+      "자식창:",
+      elements[i].id,
+      ".getBoundingClientRect().top:     ",
+      elements[i].getBoundingClientRect().top
+    );
+    console.log(
+      "자식창-부모창)",
+      elements[i].id,
+      "distanceBetweenParentAndChild:     ",
+      distanceBetweenParentAndChild
+    );
+  }
 });
 
 // froduct scroll
